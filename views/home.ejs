@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <title>Home</title>
+</head>
+<body>
+   <div class="service-container">
+       <div class="service-content">
+           <div class="modale">
+            just a text
+           </div>
+           
+           <table class="service__table">
+               <tr>
+                   <td>services</td>
+                   <td>price</td>
+                   <td>time</td>
+               </tr>
+               <% data.forEach(row=>{%>
+
+                <tr>
+                    <td class="service__name"> <%= row.name%> </td>
+                    <td class="service__price"> <span class="service__price-number"> <%= row.price%> </span> €</td>
+                    <td class="service__time"> <span class="service__time-number"> <%=row.time%> </span> min</td>
+                </tr>
+
+               <% })%>
+             
+           </table>
+           <form  class="service__form">
+               <input type="time" class="service__time-input service__input">
+               <input type="date" class="service__date service__input">
+               <button class="service__button">register</button>
+           </form>
+       </div>
+   </div>
+
+   <script src="/js/myJs.js"></script>
+</body>
+</html>
